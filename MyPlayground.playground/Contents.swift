@@ -1,12 +1,15 @@
 import UIKit
 
-var greeting = "Hello, playground"
+var greeting = "Hello, calculator lv-3"
 print(greeting)
 
 import SwiftUI
 
+
+//계산 lv-3//
+
 class Machine {
-    //이넘은 밖에있어도 가능
+    //enum은 밖에있어도 가능하다고함
     enum Skill {
         case plus
         case minus
@@ -29,19 +32,6 @@ class Machine {
         }
     }
 }
-
-class aaappp {
-    func aa(fn : Double , sn : Double) -> Double {
-        return 0.0
-    }
-}
-
-class b : aaappp {
-    override func aa(fn: Double, sn: Double) -> Double {
-    return fn + sn
-}
-}
-
 
 
 class Plus {
@@ -75,69 +65,41 @@ var result = Machine().calRun(skill: Machine.Skill.divide, fn: 10.0, sn: 2.0)
 
 print(result)
 
+///계산기 lv-1
+///
+
+
+var hi = "Hello, calculator lv-1"
+print(hi)
+
+
+//계산 lv - 1
+
+class calculator1 {
+    func calMk1(skill: String, fnumber: Double, snumber: Double) -> Double {
+        if skill == "+" {
+            return fnumber + snumber
+        }else if skill == "-" {
+            return fnumber - snumber
+        }else if skill == "*" {
+            return fnumber * snumber
+        }else if skill == "/" {
+            return fnumber / snumber
+        }
+        return 0
+    }
+
+}
+
+var plus1 = calculator1().calMk1(skill: "+", fnumber: 10, snumber: 20)
+var minus1 = calculator1().calMk1(skill: "-", fnumber: 10, snumber: 20)
+var multiple1 = calculator1().calMk1(skill: "*", fnumber: 10, snumber: 20)
+var devide1 = calculator1().calMk1(skill: "/", fnumber: 4, snumber: 3)
+
+print(plus1, minus1)
+print(multiple1, devide1)
 
 
 
 
-
-//class calculator {
-//    func calMk1(skill: String, fnumber: Double, snumber: Double) -> Double {
-//        if skill == "+" {
-//            return fnumber + snumber
-//        }else if skill == "-" {
-//            return fnumber - snumber
-//        }else if skill == "*" {
-//            return fnumber * snumber
-//        }else if skill == "/" {
-//            return fnumber / snumber
-//        }
-//        return ""
-//    }
-//
-//}
-//
-//var plus = calculator().calMk1(skill: "+", fnumber: 10, snumber: 20)
-//var minus = calculator().calMk1(skill: "-", fnumber: 10, snumber: 20)
-//var multiple = calculator().calMk1(skill: "*", fnumber: 10, snumber: 20)
-//var devide = calculator().calMk1(skill: "/", fnumber: 4, snumber: 3)
-//
-//print(plus, minus)
-//print(multiple, devide)
-
-//전역변수. 클래스 밖
-
-
-//class calAdd{
-//    var outside = 0.0 //지역변수 클래스 안
-//
-//    func run(num1: Double , num2 : Double) {
-//
-//        let result = num1 + num2
-//        outside = result
-//
-//        print(outside)
-//    }
-//}
-//
-//class calMinus {
-//     func run(num1: Double , num2 : Double) {
-//        num1 - num2
-//    }
-//}
-//
-//class calMultiple {
-//     func run(num1: Double , num2 : Double) {
-//        num1 * num2
-//    }
-//
-//    class calDivide{
-//        func run(num1: Double , num2 : Double) {
-//            num1 / num2
-//        }
-//    }
-//}
-//
-//var result = calAdd()
-//print(result.run(num1: 3, num2: 2))
-//print(result.outside)
 
